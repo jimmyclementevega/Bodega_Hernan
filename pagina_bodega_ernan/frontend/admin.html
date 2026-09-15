@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Control - Tienda Hernán</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="logo">TIENDA HERNAN</h1>
+    <nav aria-label="Menú principal">
+      <ul class="nav">
+        <li><a href="index.html">Hogar</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container my-5">
+  <section id="login-section" class="row justify-content-center">
+    <div class="col-lg-5">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="h4 mb-3 text-success text-center">Acceso al Panel</h2>
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="login-user" class="form-label">Usuario</label>
+              <input type="text" id="login-user" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="login-password" class="form-label">Contraseña</label>
+              <input type="password" id="login-password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Ingresar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel-section" class="d-none">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="h3 mb-0">Panel de Control</h1>
+      <button id="logout-btn" type="button" class="btn btn-outline-danger">Cerrar Sesión</button>
+    </div>
+
+    <ul class="nav nav-tabs mb-4" id="admin-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-productos" data-tab="productos" type="button" role="tab">Productos</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-pedidos" data-tab="pedidos" type="button" role="tab">Pedidos</button>
+      </li>
+    </ul>
+
+    <div id="productos-section">
+      <div class="row g-4">
+        <section class="col-lg-5" aria-labelledby="form-title">
+          <div class="card shadow-sm p-4">
+            <h2 id="form-title" class="h4 mb-3 text-success">Agregar Producto</h2>
+
+            <form id="form-admin">
+            <div class="mb-3">
+              <label for="admin-nombre" class="form-label">Nombre del Producto</label>
+              <input type="text" id="admin-nombre" class="form-control" placeholder="Ej. Papas Lays Familiares" required>
+            </div>
+            <div class="mb-3">
+              <label for="admin-precio" class="form-label">Precio (S/)</label>
+              <input type="number" id="admin-precio" class="form-control" step="0.01" min="0.10" placeholder="0.00" required>
+            </div>
+            <div class="mb-3">
+              <label for="admin-imagen" class="form-label">Ruta de Imagen</label>
+              <input type="text" id="admin-imagen" class="form-control" placeholder="imagenes/producto.webp">
+            </div>
+            <div class="mb-3">
+              <label for="admin-desc" class="form-label">Descripción</label>
+              <textarea id="admin-desc" class="form-control" rows="2" placeholder="Detalle para el cliente..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="admin-categoria" class="form-label">Mostrar en</label>
+              <select id="admin-categoria" class="form-select">
+                <option value="destacado">Destacados</option>
+                <option value="normal">Productos normales</option>
+                <option value="promocion">Promociones</option>
+              </select>
+            </div>
+            <div class="mb-3" id="campo-descuento">
+              <label for="admin-descuento" class="form-label">Porcentaje de promoción (%)</label>
+              <input type="number" id="admin-descuento" class="form-control" min="0" max="100" step="1" value="0">
+              <div class="form-text">Se aplica solo cuando el producto se muestra en promociones.</div>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Publicar en Tienda</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="col-lg-7" aria-labelledby="tabla-title">
+        <div class="card shadow-sm p-4">
+          <h2 id="tabla-title" class="h4 mb-3 text-danger">Inventario Activo</h2>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Categoría</th>
+                  <th>Promo</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-inventario"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section id="pedidos-section" class="d-none">
+    <div class="card shadow-sm p-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h2 class="h4 mb-1 text-primary">Pedidos</h2>
+          <p class="mb-0 text-muted">Aquí se muestran los pedidos guardados en el backend.</p>
+        </div>
+        <button id="refresh-pedidos" type="button" class="btn btn-outline-secondary">Actualizar pedidos</button>
+      </div>
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Hora de recojo</th>
+              <th>Teléfono</th>
+              <th>Items</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-pedidos"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

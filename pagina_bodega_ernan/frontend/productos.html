@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Tienda Hernán</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Tienda Hernán: Tu bodega de confianza en el barrio. Encuentra abarrotes, bebidas heladas y promociones.">
+</head>
+<body class="segundo">
+<header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">TIENDA HERNAN</h1>
+      <nav aria-label="Menú principal">
+        <ul class="nav">
+          <li><a href="index.html">Hogar</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button id="cart-toggle" aria-controls="cart" aria-expanded="false" class="btn btn-outline-primary position-relative">
+        🛒 Carrito <span id="cart-count" class="badge bg-danger rounded-pill">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="productos" aria-labelledby="productos-normales-title">
+      <div class="container">
+        <h3 id="productos-normales-title">Productos normales</h3>
+        <div class="grid" id="grid-normales">
+          <article class="producto" data-id="1" data-name="Gaseosas: Coca-Cola (regular/zero)" data-price="8.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/coca-cola.webp" alt="Botella de Coca-Cola regular y Zero">
+            </figure>
+            <h3>Gaseosas: Coca-Cola (regular/zero)</h3>
+            <p class="precio">S/ 8.50</p>
+            <p class="desc">La gaseosa más vendida, perfecta para el almuerzo al paso.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="2" data-name="Agua San Luis / Cielo (625 ml)" data-price="1.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/agua san_luis.webp" alt="Botella de Agua San Luis o Cielo de 625 ml">
+            </figure>
+            <h3>Agua San Luis / Cielo (625 ml)</h3>
+            <p class="precio">S/ 1.50</p>
+            <p class="desc">Agua de mesa sin gas, esencial para la hidratación diaria.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="3" data-name="Cerveza Pilsen (Botella 630 ml)" data-price="6.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/pilsen.jfif" alt="Botella de Cerveza Pilsen de 630 ml">
+            </figure>
+            <h3>Cerveza Pilsen (Botella 630 ml)</h3>
+            <p class="precio">S/ 6.50</p>
+            <p class="desc">La clásica "chela" helada para el fin de semana o reuniones.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="4" data-name="Pack Whisky JOHNNIE WALKER Black Label 750ml + Ginger Ale EVERVESS Botella 1.5L" data-price="47.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Pack Whisky JOHNNIE WALKER Black Label 750ml + Ginger Ale EVERVESS Botella 1.5L.webp" alt="Pack Whisky JOHNNIE WALKER Black Label 750ml + Ginger Ale EVERVESS Botella 1.5L">
+            </figure>
+            <h3>Pack Whisky JOHNNIE WALKER Black Label 750ml + Ginger Ale EVERVESS Botella 1.5L</h3>
+            <p class="precio">
+              <span class="antes">S/ 119.90</span> S/ 47.50
+            </p>
+            <p class="desc">llevate este producto en promocion</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="5" data-name="Gaseosa PEPSI Cola Botella 3L" data-price="9.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Gaseosa PEPSI Cola Botella 3L.webp" alt="Gaseosa PEPSI Cola Botella 3L">
+            </figure>
+            <h3>Gaseosa PEPSI Cola Botella 3L</h3>
+            <p class="precio">
+              <span class="antes">S/ 12.50</span> S/ 9.50
+            </p>
+            <p class="desc">llevate este producto en promocion</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="6" data-name="Pack Galletas Soda FIELD Bolsa 6 x 2un" data-price="5.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Pack Galletas Soda FIELD Bolsa 6 x 2un.webp" alt="Pack Galletas Soda FIELD Bolsa 6 x 2un">
+            </figure>
+            <h3>Pack Galletas Soda FIELD Bolsa 6 x 2un</h3>
+            <p class="precio">
+              <span class="antes">S/ 8.00</span> S/ 5.50
+            </p>
+            <p class="desc">llevate este producto en promocion</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="7" data-name="Nachos TAKIS Intenso Bolsa 200g" data-price="3.99">
+            <figure class="producto-imagen">
+              <img src="imagenes/Nachos TAKIS Intenso Bolsa 200g.webp" alt="Nachos TAKIS Intenso Bolsa 200g">
+            </figure>
+            <h3>Nachos TAKIS Intenso Bolsa 200g</h3>
+            <p class="precio">
+              <span class="antes">S/ 5.50</span> S/ 3.99
+            </p>
+            <p class="desc">llevate este producto en promocion</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="8" data-name="Gaseosa SPRITE Botella 2.25L" data-price="7.99">
+            <figure class="producto-imagen">
+              <img src="imagenes/Gaseosa SPRITE Botella 2.25L.webp" alt="Gaseosa SPRITE Botella 2.25L">
+            </figure>
+            <h3>Gaseosa SPRITE Botella 2.25L</h3>
+            <p class="precio">
+              <span class="antes">S/ 10.50</span> S/ 7.99
+            </p>
+            <p class="desc">llevate este producto en promocion</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="9" data-name="Manzana Royal Gala Importada x kg" data-price="5.00">
+            <figure class="producto-imagen">
+              <img src="imagenes/Manzana Royal Gala Importada x kg.webp" alt="Manzana Royal Gala Importada x kg">
+            </figure>
+            <h3>Manzana Royal Gala Importada x kg</h3>
+            <p class="precio">
+              <span class="antes">S/ 7.50</span> S/ 5.00
+            </p>
+            <p class="desc">llevate este producto en promocion</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="10" data-name="Arroz Añejo Extra COSTEÑO Bolsa 5Kg" data-price="19.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Arroz Añejo Extra COSTEÑO Bolsa 5Kg.webp" alt="Arroz Añejo Extra COSTEÑO Bolsa 5Kg">
+            </figure>
+            <h3>Arroz Añejo Extra COSTEÑO Bolsa 5Kg</h3>
+            <p class="precio">S/ 19.50</p>
+            <p class="desc">Arroz de excelente calidad para tus comidas diarias.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="11" data-name="Arroz Extra COSTEÑO Bolsa 5Kg" data-price="18.00">
+            <figure class="producto-imagen">
+              <img src="imagenes/Arroz Extra COSTEÑO Bolsa 5Kg.webp" alt="Arroz Extra COSTEÑO Bolsa 5Kg">
+            </figure>
+            <h3>Arroz Extra COSTEÑO Bolsa 5Kg</h3>
+            <p class="precio">S/ 18.00</p>
+            <p class="desc">Arroz extra de marca COSTEÑO en bolsa de 5 kg.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="12" data-name="Cebolla Roja x kg" data-price="2.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Cebolla Roja x kg.webp" alt="Cebolla Roja x kg">
+            </figure>
+            <h3>Cebolla Roja x kg</h3>
+            <p class="precio">S/ 2.50</p>
+            <p class="desc">Cebolla roja fresca, esencial en la cocina peruana.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="13" data-name="Gaseosa Soda HEY FIT Black Fizz Lata 355ml" data-price="3.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Gaseosa Soda HEY FIT Black Fizz Lata 355ml.webp" alt="Gaseosa Soda HEY FIT Black Fizz Lata 355ml">
+            </figure>
+            <h3>Gaseosa Soda HEY FIT Black Fizz Lata 355ml</h3>
+            <p class="precio">S/ 3.50</p>
+            <p class="desc">Bebida refrescante con sabor único y moderno.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="14" data-name="Mandarina W MURCOTT x kg" data-price="3.99">
+            <figure class="producto-imagen">
+              <img src="imagenes/Mandarina W MURCOTT x kg.webp" alt="Mandarina W MURCOTT x kg">
+            </figure>
+            <h3>Mandarina W MURCOTT x kg</h3>
+            <p class="precio">S/ 3.99</p>
+            <p class="desc">Mandarina dulce y jugosa, perfecta para la fruta diaria.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="15" data-name="Plátano de Seda x kg" data-price="1.80">
+            <figure class="producto-imagen">
+              <img src="imagenes/Plátano de Seda x kg.webp" alt="Plátano de Seda x kg">
+            </figure>
+            <h3>Plátano de Seda x kg</h3>
+            <p class="precio">S/ 1.80</p>
+            <p class="desc">Plátano suave y dulce, ideal para postres y snacks.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+
+          <article class="producto" data-id="16" data-name="Tortillas de Maíz TAKIS Explosión Bolsa 200g" data-price="3.50">
+            <figure class="producto-imagen">
+              <img src="imagenes/Tortillas de Maíz TAKIS Explosión Bolsa 200g.webp" alt="Tortillas de Maíz TAKIS Explosión Bolsa 200g">
+            </figure>
+            <h3>Tortillas de Maíz TAKIS Explosión Bolsa 200g</h3>
+            <p class="precio">S/ 3.50</p>
+            <p class="desc">Snack crujiente de maíz con sabor explosivo.</p>
+            <button class="add-to-cart">Agregar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cart" class="cart" aria-labelledby="cart-heading">
+      <h2 id="cart-heading">Carrito</h2>
+      <ul id="cart-items" class="cart-items">
+        <li class="empty">El carrito está vacío.</li>
+      </ul>
+      <p id="total-monto">Total: S/ 0.00</p>
+      <button id="checkout">Finalizar compra</button>
+      <form id="checkout-form" class="d-none mt-3">
+        <div class="mb-2">
+          <label for="cliente-nombre" class="form-label">Nombre</label>
+          <input type="text" id="cliente-nombre" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label for="cliente-hora" class="form-label">Hora aproximada de recojo</label>
+          <input type="text" id="cliente-hora" class="form-control" placeholder="Ej. En 15 minutos, a las 6:00 pm" required>
+        </div>
+        <div class="mb-2">
+          <label for="cliente-telefono" class="form-label">Teléfono</label>
+          <input type="tel" id="cliente-telefono" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Enviar pedido por WhatsApp</button>
+        <button type="button" id="guardar-pedido" class="btn btn-secondary w-100 mt-2">Agregar a carrito</button>
+      </form>
+    </aside>
+
+  <script src="js/javascript.js"></script>
+</body>
+</html>
